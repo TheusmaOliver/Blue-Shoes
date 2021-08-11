@@ -1,0 +1,102 @@
+.main {
+  width: 100%;
+}
+.search {
+  width: 10rem;
+  height: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+}
+.search input {
+  font-size: 0.7rem;
+  width: 8rem;
+  border: none;
+  outline: none;
+  padding: 0 0 0 0.4rem;
+}
+
+.main ul {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap: 1.5rem;
+  margin-top: 2rem;
+}
+.main li {
+  list-style: none;
+}
+
+.main .imagem {
+  margin-bottom: 1rem;
+  height: 13rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.main img {
+  width: 10rem;
+}
+.main .imagem button,
+.main .imagem a{
+  display: none;
+}
+
+.main .imagem a{
+  color: black;
+}
+
+.main .imagem:hover {
+  background-color: gray;
+}
+.main .imagem:hover button,
+.main .imagem:hover a{
+  display: block;
+}
+
+.main .imagem .botoes {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.main .imagem .botoes .botaoIcon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main .imagem .botoes .botaoIcon:hover #edit {
+  color: blue;
+}
+.main .imagem .botoes .botaoIcon:hover #delete {
+  color: red;
+}
+.main .imagem .botoes .icon {
+  width: 1.2rem;
+}
+
+.main .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  
+  margin-bottom: 2rem;
+}
+
+.main .info h3 {
+  font-weight: normal;
+}
+
+.main .info span{
+  font-style: italic;
+  color: gray;
+}
