@@ -7,6 +7,8 @@ import Header from '../../pages/Header/index'
 const initialValue = {
   name: '',
   imageUrl: '',
+  price:'',
+  model: '',
  
 }
 
@@ -70,6 +72,20 @@ const ShoesForm = ({ id }) => {
                 name="imageUrl"
                 type="text"
                 value={values.imageUrl}
+                onChange={onChange}
+            />
+            <input
+                placeholder="Preço"
+                name="price"
+                type="text"
+                value={values.price}
+                onChange={onChange}
+            />
+            <input
+                placeholder="Modelo"
+                name="model"
+                type="text"
+                value={values.model}
                 onChange={onChange}
             />
             <br />
