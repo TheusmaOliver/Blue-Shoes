@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 import './Header.css'
+import Logo from '../../assets/img/logo-blue.gif'
 
 
 function Header(){
@@ -8,8 +10,19 @@ function Header(){
     return(
         <div>
             <header className="header">
-                <Link to="/" id='titulo'><h1>Calçados</h1></Link>
-                <Link to="/cadastro" className="btn" id="cadastro"><button > Cadastrar Calçado</button></Link>
+                <div className="header-title">
+                    <Link to="/" id='titulo'>
+                        <div className="header-logo">
+                                <img src={Logo} alt="logo blue" id="logo"/>
+                                <h1>Calçados</h1>
+                        </div>
+                    </Link>
+                    <Link to="/cadastro" className="btn" >
+                        <Button variant="contained" color="primary">
+                            Cadastrar calçado
+                        </Button>
+                    </Link>
+                </div>
                 <hr/>
                     <ul>
                     <li><Link to="/feminino" className="btn">Feminino</Link></li>

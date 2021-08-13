@@ -29,6 +29,21 @@ class ShoesController {
     res.send(shoes);
   }
 
+  async getShoesByName(req, res) {
+    const name = req.params.name;
+    
+    const shoes = await shoesService.findByName(name);
+
+    // Validação das mensagens
+    if (!shoes) {
+      res.status(404).send("Calçado não encontrado.");
+
+      return;
+    }
+
+    res.send(shoes);
+  }
+
   async createShoes(req, res) {
     const shoes = req.body;
 

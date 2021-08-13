@@ -9,6 +9,13 @@ class ShoesService{
         return await shoesModel.findById(id);
     }
 
+    async findByName(name){
+        const findByName = await shoesModel.find({name:`/.*${name}*/i`})
+        
+
+        return findByName;
+    }
+
     async createShoes(shoes){
         return await new shoesModel(shoes).save();
     }

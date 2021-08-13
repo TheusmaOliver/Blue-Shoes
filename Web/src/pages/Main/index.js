@@ -11,14 +11,12 @@ const BASE_URL = "http://localhost:3001";
 
 export default function Main() {
   const [shoes, setShoes] = useState([]);
-  
+ 
   const loadShoes = () => {
     axios.get(`${BASE_URL}/shoes`)
     .then((response)=>{
       setShoes(response.data)
     })
-    
-
   };
 
   useEffect(() => {
@@ -30,15 +28,16 @@ export default function Main() {
     loadShoes();
   };
 
+
+
   return (
     <div className="container">
       <Header />
-      
       <main className="main">
         <ul>
           {shoes.map((calcado, index) => (
             <li key={index}>
-              <div className="imagem">
+              <div className="itens">
                 <img src={calcado.imageUrl} alt={calcado.name} />
                 <div className="botoes">
                   <Button variant="contained" color="primary">

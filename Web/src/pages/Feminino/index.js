@@ -40,7 +40,7 @@ function Feminino() {
               <div className="item">
                 <img
                   src={calcado.imageUrl}
-                  className={calcado.class}
+                  
                   alt={calcado.name}
                 />
                 <div className="botoes">

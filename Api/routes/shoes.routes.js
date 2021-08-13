@@ -11,6 +11,9 @@ router.get("/shoes", shoesController.getShoes);
 // [GET] /shoes/{id} - Retorna apenas um único calçado pelo ID
 router.get("/shoes/:id", shoesController.getShoesById);
 
+// [GET] /shoes/{id} - Retorna apenas um único calçado pelo nome
+router.get("/shoes/search/:name", shoesController.getShoesByName);
+
 // [POST] - /shoes - Cria um novo calçado
 router.post("/shoes", shoesController.createShoes);
 

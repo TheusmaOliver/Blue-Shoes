@@ -61,6 +61,7 @@ const ShoesForm = ({ id }) => {
             <form onSubmit={onSubmit}>
             <input
                 placeholder="Nome"
+                required
                 name="name"
                 type="text"
                 value={values.name}
@@ -70,6 +71,7 @@ const ShoesForm = ({ id }) => {
             <input
                 placeholder="Url da Imagem"
                 name="imageUrl"
+                required
                 type="text"
                 value={values.imageUrl}
                 onChange={onChange}
@@ -77,6 +79,7 @@ const ShoesForm = ({ id }) => {
             <input
                 placeholder="Preço"
                 name="price"
+                required
                 type="text"
                 value={values.price}
                 onChange={onChange}
@@ -84,6 +87,7 @@ const ShoesForm = ({ id }) => {
             <input
                 placeholder="Modelo"
                 name="model"
+                required
                 type="text"
                 value={values.model}
                 onChange={onChange}
